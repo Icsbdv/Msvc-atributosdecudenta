@@ -61,7 +61,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>desplieguedecuentas</finalName>
+		<finalName>Dummy-visordefirmas</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
