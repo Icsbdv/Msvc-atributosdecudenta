@@ -44,6 +44,11 @@ public class CuentaController {
     private IPersonaService personaService;
 
 
+    @Autowired
+    private IAtributosCuentaService atributosCuentaService;
+
+
+
     @GetMapping("getCuenta")
     public ResponseEntity<Cuenta> verCuenta(@RequestParam String idCuenta) {
         Optional<Cuenta> o = cuentaService.findById(idCuenta);
@@ -119,6 +124,22 @@ public class CuentaController {
         }
         return ResponseEntity.ok().body(o);
     }
+
+
+    @GetMapping("getAtributosCuentas")
+    public ResponseEntity<?> verAtributos() {
+
+        List<Tipocondicion> tcondiciones=atributosCuentaService.obtenerCondiciones();
+        List<Tipocuenta> tcuentas=atributosCuentaService.obtenerTiposDeCuenta();
+        List<Tipoimagen> timagen=atributosCuentaService.obtenerTiposDeImagenes();
+        List<Tiporegla> tregla=atributosCuentaService.obtenerTiposDeRegla();
+        List<Tipotitular> ttitular=atributosCuentaService.obtenerTiposDeTitular();
+
+        Atributocuenta atributocuenta=new Atributocuenta(tcondiciones,tcuentas,timagen,tregla,ttitular);
+
+        return ResponseEntity.ok().body(atributocuenta);
+    }
+
 
 
 
