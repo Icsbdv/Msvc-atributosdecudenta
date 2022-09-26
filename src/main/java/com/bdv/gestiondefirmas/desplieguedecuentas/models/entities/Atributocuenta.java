@@ -11,11 +11,12 @@ import java.util.List;
 public class Atributocuenta {
 
 
-    private List<Tipocondicion> condiciones;
+    private List<Tipofirmante> tiposfirmantes;
     private List<Tipocuenta> tiposcuenta;
     private List<Tipoimagen> tiposimagenes;
     private List<Tiporegla> tiposreglas;
     private List<Tipotitular> tipostitulares;
+    private List<Sucursales> sucursales;
 
 
 

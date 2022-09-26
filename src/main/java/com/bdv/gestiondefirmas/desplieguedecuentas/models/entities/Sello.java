@@ -32,11 +32,16 @@ public class Sello {
     private Integer longitud;
 
     @Column(name="Imagen")
-    @Lob
-    private byte[] imagen;
+    private String imagen;
 
-    public Integer getImagenHashCode(){
-        return (this.imagen!=null) ? this.imagen.hashCode():null;
-    }
+  //  @Column(name="Imagen")
+  //  @Lob
+  //  private byte[] imagen;
+
+
+
+    //public Integer getImagenHashCode(){
+      //  return (this.imagen!=null) ? this.imagen.hashCode():null;
+    //}
 
 }

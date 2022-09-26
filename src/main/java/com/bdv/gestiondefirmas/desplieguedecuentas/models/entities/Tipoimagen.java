@@ -20,7 +20,7 @@ public class Tipoimagen {
 
     @Id
     @Column(name="ID_TIPO_IMAGEN")
-    private Integer idTipoCuenta;
+    private Integer idTipoImagen;
 
     @Column(name="TIPO_IMAGEN")
     private String tipoImagen;

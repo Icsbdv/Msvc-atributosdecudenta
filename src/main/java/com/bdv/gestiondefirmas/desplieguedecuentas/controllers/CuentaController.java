@@ -49,6 +49,9 @@ public class CuentaController {
 
 
 
+
+
+
     @GetMapping("getCuenta")
     public ResponseEntity<Cuenta> verCuenta(@RequestParam String idCuenta) {
         Optional<Cuenta> o = cuentaService.findById(idCuenta);
@@ -79,8 +82,8 @@ public class CuentaController {
 
     @GetMapping("getSello")
     public ResponseEntity<?> verSello(@RequestParam Long idImagen) {
-        Optional<Sello> o = selloService.findByIdImagen(idImagen);
-        if (o.isEmpty()) {
+        Sello o = selloService.findByIdImagen(idImagen);
+        if (o.getImagen()==null) {
             return ResponseEntity.notFound().build();
         }
         return ResponseEntity.ok().body(o);
@@ -107,9 +110,9 @@ public class CuentaController {
 
 
     @GetMapping("getImagenfirma")
-    public ResponseEntity<?> verFirma(@RequestParam Long idImagen) {
-        Optional<Firma> o = firmaService.findByIdImagen(idImagen);
-        if (o.isEmpty()) {
+    public ResponseEntity<Firma> verFirma(@RequestParam Long idImagen) {
+        Firma o = firmaService.findByIdImagen(idImagen);
+        if (o.getImagen()==null) {
             return ResponseEntity.notFound().build();
         }
         return ResponseEntity.ok().body(o);
@@ -129,13 +132,14 @@ public class CuentaController {
     @GetMapping("getAtributosCuentas")
     public ResponseEntity<?> verAtributos() {
 
-        List<Tipocondicion> tcondiciones=atributosCuentaService.obtenerCondiciones();
+        List<Tipofirmante> tcondiciones=atributosCuentaService.obtenerCondiciones();
         List<Tipocuenta> tcuentas=atributosCuentaService.obtenerTiposDeCuenta();
         List<Tipoimagen> timagen=atributosCuentaService.obtenerTiposDeImagenes();
         List<Tiporegla> tregla=atributosCuentaService.obtenerTiposDeRegla();
         List<Tipotitular> ttitular=atributosCuentaService.obtenerTiposDeTitular();
+        List<Sucursales> sucursales=atributosCuentaService.obtenerSucursales();
 
-        Atributocuenta atributocuenta=new Atributocuenta(tcondiciones,tcuentas,timagen,tregla,ttitular);
+        Atributocuenta atributocuenta=new Atributocuenta(tcondiciones,tcuentas,timagen,tregla,ttitular,sucursales);
 
         return ResponseEntity.ok().body(atributocuenta);
     }

@@ -6,10 +6,11 @@ import java.util.List;
 
 public interface IAtributosCuentaService {
 
-    List<Tipocondicion> obtenerCondiciones();
+    List<Tipofirmante> obtenerCondiciones();
     List<Tipocuenta> obtenerTiposDeCuenta();
     List<Tipoimagen> obtenerTiposDeImagenes();
     List<Tiporegla> obtenerTiposDeRegla();
     List<Tipotitular> obtenerTiposDeTitular();
+    List<Sucursales> obtenerSucursales();
 
 }

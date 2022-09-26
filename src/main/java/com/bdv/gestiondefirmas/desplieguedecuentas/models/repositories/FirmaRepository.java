@@ -10,5 +10,5 @@ import java.util.Optional;
 public interface FirmaRepository extends CrudRepository<Firma,Long> {
 
     @Query(value="Select * from FIRMA u where u.ID_IMAGEN=?1",nativeQuery = true)
-    Optional<Firma> finByIdImagen(Long idImagen);
+    Firma finByIdImagen(Long idImagen);
 }

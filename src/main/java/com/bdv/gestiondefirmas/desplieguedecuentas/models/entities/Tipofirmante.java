@@ -1,6 +1,5 @@
 package com.bdv.gestiondefirmas.desplieguedecuentas.models.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 
 import javax.persistence.*;
@@ -11,8 +10,8 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-@Table(name="TIPO_CONDICION")
-public class Tipocondicion {
+@Table(name="TIPO_FIRMANTE")
+public class Tipofirmante {
 
     @Id
     @Column(name="ID_TIPO")

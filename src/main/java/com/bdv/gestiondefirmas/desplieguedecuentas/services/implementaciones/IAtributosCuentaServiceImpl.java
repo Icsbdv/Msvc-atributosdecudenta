@@ -21,15 +21,18 @@ public class IAtributosCuentaServiceImpl implements IAtributosCuentaService {
     @Autowired
     TipoImagenRepository tipoImagenRepository;
     @Autowired
-    TipoCondicionRepository tipoCondicionRepository;
+    TiposFirmantesRepository tipoCondicionRepository;
     @Autowired
     TipoCuentaRepository tipoCuentaRepository;
+
+    @Autowired
+    SucursalesRepository sucursalesRepository;
 
 
 
     @Override
-    public List<Tipocondicion> obtenerCondiciones() {
-        return (List<Tipocondicion>) tipoCondicionRepository.findAll();
+    public List<Tipofirmante> obtenerCondiciones() {
+        return (List<Tipofirmante>) tipoCondicionRepository.findAll();
     }
 
     @Override
@@ -50,5 +53,10 @@ public class IAtributosCuentaServiceImpl implements IAtributosCuentaService {
     @Override
     public List<Tipotitular> obtenerTiposDeTitular() {
         return (List<Tipotitular>) tipoTitularRepository.findAll();
+    }
+
+    @Override
+    public List<Sucursales> obtenerSucursales() {
+        return (List<Sucursales>) sucursalesRepository.findAll();
     }
 }
