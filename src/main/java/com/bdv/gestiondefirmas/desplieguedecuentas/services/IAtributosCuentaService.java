@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface IAtributosCuentaService {
 
-    List<Tipofirmante> obtenerCondiciones();
+    List<Tipofirmante> obtenerTiposFirmantes();
     List<Tipocuenta> obtenerTiposDeCuenta();
     List<Tipoimagen> obtenerTiposDeImagenes();
     List<Tiporegla> obtenerTiposDeRegla();

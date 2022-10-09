@@ -4,14 +4,17 @@ package com.bdv.gestiondefirmas.desplieguedecuentas.services.implementaciones;
 import com.bdv.gestiondefirmas.desplieguedecuentas.models.entities.*;
 import com.bdv.gestiondefirmas.desplieguedecuentas.models.repositories.*;
 import com.bdv.gestiondefirmas.desplieguedecuentas.services.IAtributosCuentaService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.io.IOException;
 import java.util.List;
 
 
 
 @Service
+@Slf4j
 public class IAtributosCuentaServiceImpl implements IAtributosCuentaService {
 
     @Autowired
@@ -31,32 +34,34 @@ public class IAtributosCuentaServiceImpl implements IAtributosCuentaService {
 
 
     @Override
-    public List<Tipofirmante> obtenerCondiciones() {
-        return (List<Tipofirmante>) tipoCondicionRepository.findAll();
+    public List<Tipofirmante> obtenerTiposFirmantes() {
+        return (List<Tipofirmante>) tipoCondicionRepository.obtenerTiposFirmantes();
     }
 
     @Override
     public List<Tipocuenta> obtenerTiposDeCuenta() {
-        return (List<Tipocuenta>) tipoCuentaRepository.findAll();
+        return (List<Tipocuenta>) tipoCuentaRepository.obtenerTipoCuentas();
     }
 
     @Override
     public List<Tipoimagen> obtenerTiposDeImagenes() {
-        return (List<Tipoimagen>) tipoImagenRepository.findAll();
+        return (List<Tipoimagen>) tipoImagenRepository.obtenerTiposImagen();
     }
 
     @Override
     public List<Tiporegla> obtenerTiposDeRegla() {
-        return (List<Tiporegla>) tipoReglaRepository.findAll();
+
+        return (List<Tiporegla>) tipoReglaRepository.obtenerReglas();
     }
 
     @Override
     public List<Tipotitular> obtenerTiposDeTitular() {
-        return (List<Tipotitular>) tipoTitularRepository.findAll();
+        return (List<Tipotitular>) tipoTitularRepository.obtenerTiposTitulares();
     }
 
     @Override
     public List<Sucursales> obtenerSucursales() {
-        return (List<Sucursales>) sucursalesRepository.findAll();
+            List<Sucursales> sucursales=sucursalesRepository.obtenerSucursales();
+            return sucursales;
     }
 }

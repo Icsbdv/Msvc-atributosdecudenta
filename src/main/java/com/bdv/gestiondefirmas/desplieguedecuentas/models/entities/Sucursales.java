@@ -15,7 +15,7 @@ public class Sucursales {
 
     @Id
     @Column(name="ID_Sucursal")
-    private Long idSucursal;
+    private String idSucursal;
 
 
     @Column(name="Nombre")

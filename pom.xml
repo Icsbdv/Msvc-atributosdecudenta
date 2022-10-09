@@ -8,8 +8,8 @@
 		<version>2.7.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.bdv.gestiondefirmas</groupId>
-	<artifactId>desplieguedecuentas</artifactId>
+	<groupId>com.bdv.atributoscuenta</groupId>
+	<artifactId>atributoscuenta</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>desplieguedecuentas</name>
 	<description>Microservicios de despliegue de cuentas,grafos,sellos y condiciones de movilización</description>
@@ -61,7 +61,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>Dummy-visordefirmas</finalName>
+		<finalName>Msvc-atributoscuenta</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
