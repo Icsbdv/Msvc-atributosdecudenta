@@ -64,7 +64,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>msvcatributosdecuenta</finalName>
+		<finalName>msvcatributosdecuenta-r1-bdv</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
