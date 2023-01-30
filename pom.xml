@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -8,10 +8,10 @@
 		<version>2.7.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.bdv.atributoscuenta</groupId>
-	<artifactId>atributoscuenta</artifactId>
+	<groupId>com.bdv.Msvc-visordefirmas</groupId>
+	<artifactId>Msvc-visordefirmas</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>desplieguedecuentas</name>
+	<name>Msvc-visordefirmas</name>
 	<description>Microservicios de despliegue de cuentas,grafos,sellos y condiciones de movilización</description>
 	<properties>
 		<java.version>17</java.version>
@@ -41,11 +41,7 @@
 		<dependency>
 			<groupId>com.microsoft.sqlserver</groupId>
 			<artifactId>mssql-jdbc</artifactId>
-			<scope>runtime</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.mariadb.jdbc</groupId>
-			<artifactId>mariadb-java-client</artifactId>
+			<!--<version>6.4.0.jre7</version>-->
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>
@@ -63,13 +59,10 @@
 			<artifactId>jasypt-spring-boot-starter</artifactId>
 			<version>3.0.3</version>
 		</dependency>
-
-
-
 	</dependencies>
 
 	<build>
-		<finalName>msvcatributosdecuenta-r2-bdv</finalName>
+		<finalName>msvcvisordefirmas-r3-bdv</finalName>
 		<plugins>
 			<plugin>
 				<groupId>com.github.ulisesbocchio</groupId>
