@@ -8,11 +8,11 @@
 		<version>2.7.1</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.bdv.Msvc-visordefirmas</groupId>
-	<artifactId>Msvc-visordefirmas</artifactId>
+	<groupId>com.bdv.Msvc-atributosdecuenta</groupId>
+	<artifactId>Msvc-atributosdecuenta</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Msvc-visordefirmas</name>
-	<description>Microservicios de despliegue de cuentas,grafos,sellos y condiciones de movilización</description>
+	<name>Msvc-atributosdecuenta</name>
+	<description>Microservicios de despliegue de los atributos de una cuenta</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -62,7 +62,7 @@
 	</dependencies>
 
 	<build>
-		<finalName>msvcvisordefirmas-r3-bdv</finalName>
+		<finalName>msvcatributosdecuenta</finalName>
 		<plugins>
 			<plugin>
 				<groupId>com.github.ulisesbocchio</groupId>
