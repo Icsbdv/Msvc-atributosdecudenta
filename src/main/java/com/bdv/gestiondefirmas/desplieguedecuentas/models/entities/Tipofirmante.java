@@ -10,15 +10,15 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-@Table(name="TIPO_FIRMANTE")
+@Table(name="Tipo")
 public class Tipofirmante {
 
     @Id
-    @Column(name="ID_TIPO")
-    private Integer idTipo;
+    @Column(name="ID_Tipo")
+    private Long idTipo;
 
 
-    @Column(name="TIPO")
+    @Column(name="Tipo")
     private String Tipo;
 
 

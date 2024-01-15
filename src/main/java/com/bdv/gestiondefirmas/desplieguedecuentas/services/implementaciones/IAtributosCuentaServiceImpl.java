@@ -35,7 +35,9 @@ public class IAtributosCuentaServiceImpl implements IAtributosCuentaService {
 
     @Override
     public List<Tipofirmante> obtenerTiposFirmantes() {
-        return (List<Tipofirmante>) tipoCondicionRepository.obtenerTiposFirmantes();
+        //return (List<Tipofirmante>) tipoCondicionRepository.obtenerTiposFirmantes();
+        return (List<Tipofirmante>) tipoCondicionRepository.findAll();
+        
     }
 
     @Override

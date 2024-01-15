@@ -8,8 +8,9 @@ import org.springframework.data.repository.CrudRepository;
 import java.util.List;
 
 public interface TiposFirmantesRepository extends CrudRepository<Tipofirmante,Long> {
-    @Query(value="Select a.ID_Tipo," +
+    /*@Query(value="Select a.ID_Tipo," +
             "a.Tipo " +
-            "from Tipo a",nativeQuery = true)
-    List<Tipofirmante> obtenerTiposFirmantes();
+            "from Tipo a",nativeQuery = true)*/
+	
+   // List<Tipofirmante> obtenerTiposFirmantes();
 }
